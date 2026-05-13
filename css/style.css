@@ -302,6 +302,25 @@ details .toggle-content {
   color: var(--text-secondary);
 }
 
+.promo-banner-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75em;
+  margin: 1.25em auto 0.5em;
+  max-width: 760px;
+}
+
+.promo-banner-grid figure {
+  margin: 0;
+}
+
+.promo-banner-grid img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
 /* ===== NAVIGATION (project pages) ===== */
 .project-nav {
   display: flex;
@@ -420,6 +439,11 @@ details.toggle-h3.task-toggle > summary {
   .task-label { font-size: 1.15rem; }
   details.toggle-h3.task-toggle > summary { font-size: 1.15rem; }
   .projects-gallery { grid-template-columns: 1fr; }
+  .promo-banner-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    gap: 1em;
+  }
   .page-wrapper { padding: 1.5em 1em 3em; }
   .ascii-art {
     font-size: clamp(0.62rem, 2.6vw, 0.8rem);
