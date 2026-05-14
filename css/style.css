@@ -122,6 +122,65 @@ img { max-width: 100%; height: auto; display: block; }
   }
 }
 
+/* ===== INLINE POPOVERS ===== */
+.scientist-popover {
+  position: relative;
+  display: inline-block;
+}
+
+.scientist-popover-trigger {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.scientist-popover-trigger:hover {
+  opacity: 0.7;
+}
+
+.scientist-popover-panel {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.45em);
+  z-index: 20;
+  width: min(360px, calc(100vw - 3em));
+  padding: 0.35em;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+}
+
+.scientist-popover-panel[hidden] {
+  display: none;
+}
+
+.scientist-popover-panel img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+@media (max-width: 680px) {
+  .scientist-popover {
+    position: static;
+  }
+
+  .scientist-popover-panel {
+    left: 1em;
+    right: 1em;
+    top: auto;
+    width: auto;
+    margin-top: 0.45em;
+  }
+}
+
 /* ===== LISTS ===== */
 ul { padding-inline-start: 1.7em; margin: 0.6em 0; }
 ul > li { padding-left: 0.1em; list-style: disc; }
